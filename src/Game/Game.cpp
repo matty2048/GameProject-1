@@ -38,6 +38,9 @@ namespace gp1 {
 		input::ButtonInputBinding* closeMenu = inMenu->CreateButtonInputBinding("closeMenu", input::buttons::keyEscape);
 		closeMenu->BindCallback(std::bind(&Game::CloseMenuCallback, this, std::placeholders::_1));
 		m_Logger.LogDebug("CloseMenu keybind is: %u, on device: %u", closeMenu->GetIndex(), (uint32_t)closeMenu->GetLocation());
+
+
+
 	}
 
 
