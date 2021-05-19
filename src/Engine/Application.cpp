@@ -17,6 +17,7 @@
 #include "Engine/Renderer/Shader/Material.h"
 #include "Engine/Renderer/Texture/Loaders/TextureLoaders.h"
 #include "Engine/Renderer/Texture/TextureCubeMap.h"
+#include "Engine/Utility/ModelLoader.h"
 
 #include "Engine/Audio/AudioCore.h"
 
@@ -136,6 +137,8 @@ namespace gp1
 		input::JoystickHandler::Init();
 		m_Renderer = renderer::Renderer::GetRenderer(renderer::RendererType::OPENGL, &m_Window);
 		m_Renderer->Init();
+
+		ModelLoader::Get()->Load("C:\\Users\\mmook\\source\\repos\\tinyobjloader\\models\\cube.obj");
 
 		//----
 		// TODO: Please remove this when some actual rendering will take place, as this is just a test entity.
